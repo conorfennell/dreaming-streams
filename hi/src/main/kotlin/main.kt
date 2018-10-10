@@ -1,3 +1,5 @@
+package com.fennellconor
+
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.common.serialization.Serdes
 import org.apache.kafka.streams.KafkaStreams
@@ -7,6 +9,7 @@ import org.apache.kafka.streams.kstream.KStream
 import java.util.*
 
 fun main(args: Array<String>) {
+    println("Starting streams app")
 
     val bootstrapServers = System.getenv("BOOTSTRAP_SERVERS") ?: "localhost:9092"
     val applicationId = System.getenv("APPLICATION_ID") ?: "hi-kotlin"
